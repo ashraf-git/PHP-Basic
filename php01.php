@@ -1,23 +1,29 @@
 <?php
-$year = 5000;
-if ($year % 4 == 0 && $year % 100 == 0 && $year % 400 == 0){
-    echo "{$year} is a leap year";
-}elseif($year % 4 == 0 && $year % 100 == 0){
-    echo "{$year} is not a leap year";
-}elseif($year % 4 == 0){
-    echo "{$year} is a leap year";
-}else{
-    echo "{$year} is not a leap year";
-}
-echo "\n";
-if (true && false) {
-    echo "wow";
-}
+$condition1 = true;
+$condition2 = true;
+$condition3 = false;
 
-if($year % 4 == 0 && ($year % 100 != 0 || $year % 400 == 0)){
-    echo "{$year} is a leap year";
+if($condition1){
+    if($condition2){
+        if($condition3){
+            echo "Hello";
+        }else{
+            echo "no 1";
+        }
+    }else{
+        echo "no 2";
+    }
 }else{
-    echo "{$year} is not a leap year";
+    echo "no 3";
 }
+echo"\n";
 
-// if(true && ( || true))
+if ($condition1 && $condition2 && $condition3) {
+    echo "Hello";
+}else if ($condition1 && $condition2){
+    echo "no 1";
+}elseif($condition1){
+    echo "no 2";
+}else{
+    echo"no 3";
+}
