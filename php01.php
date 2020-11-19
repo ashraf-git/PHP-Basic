@@ -1,13 +1,7 @@
 <?php
-$string = "8balls";
-switch ($string){
-    case (string) "9balls": 
-        echo "Nine Balls";
-        break;
-    case (string) 8:
-        echo "8";
-        break;
-    case (string) "8balls":
-        echo "Eight Balls";
-        break;
-}
+// $f = false || true;//true;
+// $e = false or true;//($e = false) or true / $e = false;
+
+$f = true && false;
+$e = true and false;
+var_dump($f, $e);
