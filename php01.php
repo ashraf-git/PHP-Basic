@@ -1,42 +1,13 @@
 <?php
-     $n = -13;
-     $r = $n % 2;
-
-     switch($r){
-         case 0:
-            switch($n){
-                case $n> 0: 
-                    echo "$n is a positve even number";
-                break;
-                case $n < 0: 
-                    echo "$n is a negative even number";
-                break;
-            }
+$string = "8balls";
+switch ($string){
+    case (string) "9balls": 
+        echo "Nine Balls";
         break;
-         default:
-            switch($n){
-                case $n > 0: 
-                    echo "$n is a positve odd number";
-                break;
-                case $n < 0: 
-                    echo "$n is a negative odd number";
-                break;
-            }
-     }
-
-     echo "\n";
-     switch(true){
-         case (0 == $r && $n > 0):
-            echo "$n is a positive even number";
-            break;
-         case (1 == $r && $n >  0):
-            echo "$n is a positive odd number";
-            break;
-         case (0 == $r && $n < 0):
-            echo "$n is a negative even number";
-            break;
-         case (-1 == $r && $n <  0):
-            echo "$n is a negative odd number";
-            break;
-
-     }
+    case (string) 8:
+        echo "8";
+        break;
+    case (string) "8balls":
+        echo "Eight Balls";
+        break;
+}
