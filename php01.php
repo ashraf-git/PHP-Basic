@@ -1,7 +1,42 @@
 <?php
-// $f = false || true;//true;
-// $e = false or true;//($e = false) or true / $e = false;
+$n = 12;
+if($n%2 == 0){
+    echo "even number";
+}else{
+    echo "odd number";
+}
+echo PHP_EOL;
 
-$f = true && false;
-$e = true and false;
-var_dump($f, $e);
+if($n%2 == 0):
+    echo "even number";
+    echo PHP_EOL;
+    echo "some text";
+  
+else: echo "odd number";
+    echo PHP_EOL;
+    echo "some text ++";
+endif;
+
+echo PHP_EOL;
+switch($n%2==0):
+    case 0:
+        echo "even number";
+        break;
+        default:
+        echo "odd number";
+    endswitch;
+    echo PHP_EOL;
+  
+
+    $n = 15;
+if ($n % 2 == 0):
+    ?>
+    even number
+    some text
+    <?php
+    else: 
+        ?>
+        odd number
+        some text ++
+        <?php
+        endif;
