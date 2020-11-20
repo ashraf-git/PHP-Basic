@@ -1,11 +1,22 @@
 <?php
-for($i = 0; $i < 100; $i++){
-    // if($i % 7 == 0) echo $i."\n";
-    // if($i % 11 == 0) echo $i."\n";
-
+$i = 0;
+while ($i < 5){
+    echo $i.PHP_EOL;
+    $i++;
 }
-
-for($i = 0, $j = 0; $i< 100; $i +=7, $j += 11){
-    echo $i."\n";
-    echo $j < 100 ? $j ."\n":'';
+echo "=========\n";
+$j= 0;
+while ($j++ <5){
+    echo $j.PHP_EOL;
 }
+echo "=========\n";
+
+$j = 0;
+while (++ $j < 5){
+    echo $j.PHP_EOL;
+}
+echo "=========\n";
+
+$x = $y = 5;
+$x = ++$y;
+echo $x.":".$y.PHP_EOL;
