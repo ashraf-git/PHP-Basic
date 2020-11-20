@@ -1,18 +1,11 @@
 <?php
-$n = 6;
-$result = 1;
-for($i = $n; $i > 1; $i--){
-    $result *= $i;
-}
-echo "Factorial of {$n} is {$result}\n";
-// dump way
+for($i = 0; $i < 100; $i++){
+    // if($i % 7 == 0) echo $i."\n";
+    // if($i % 11 == 0) echo $i."\n";
 
-// smart way
-$result = 1;
-$j = 1;
-for($n = 1; $n <= 10; $n++){
-    $result *= $n;
-    $j++;
-    echo "Factorial of {$n} is {$result}\n";
 }
-echo "total {$j} number of operations\n";
+
+for($i = 0, $j = 0; $i< 100; $i +=7, $j += 11){
+    echo $i."\n";
+    echo $j < 100 ? $j ."\n":'';
+}
