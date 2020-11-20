@@ -1,8 +1,10 @@
 <?php
-// for($i = 10; $i >= 1; $i--){
-//     echo $i.":".(11-$i).PHP_EOL;
-// }
+$n = 4;
+for($i = $n, $factorial = 1; $i>1; $i--){
+    // $factorial = $factorial * $i;
+    $factorial *= $i;
+    
 
-for($i = 10, $j =1; $i> 0; $i--,$j++){ 
-    echo $i.":" .$j.PHP_EOL;
+
 }
+printf("factorial of %d is %d\n",$n, $factorial,);
