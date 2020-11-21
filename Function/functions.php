@@ -16,3 +16,8 @@ function factorial(int $n){
     }
     return $result;
 }
+
+function serve($foodType="coffe", $noOfItem="1 cups"){
+    echo "{$noOfItem} of {$foodType} have been serveed";
+}
+

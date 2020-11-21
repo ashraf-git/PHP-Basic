@@ -1,5 +1,10 @@
 <?php
 include_once "functions.php";
 
-$x = "i";
-echo "the facrotial of {$x} is " . factorial($x);
+serve();
+echo PHP_EOL;
+function sum(int $x, int $y, int $z):int {
+   
+    return $x + $y + $z;
+}
+echo sum(4, 6, 123);
