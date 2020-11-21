@@ -1,24 +1,20 @@
 <?php
-function doTaskA(){
-    echo "Step A Done\n";
+function printN($i){
+    if($i>=10){
+        return;
+    }
+    echo $i."\n";
+    $i++;
+    printN($i);
 }
-function doTaskB(){
-    echo "Step B Done\n";
+// printN(0);
+
+function printNumber($counter, $end, $steping =2){
+    if($counter> $end){
+        return;
+    }
+    echo $counter."\n";
+    $counter+=$steping;
+    printNumber($counter,$end, $steping);
 }
-function doTaskC(){
-    echo "Step C Done\n";
-}
-function doTaskD(){
-    echo "Step D Done\n";
-}
-function doTaskE(){
-    echo "Step E Done\n";
-}
-function doTheLargerTask(){
-    doTaskA();
-    doTaskB();
-    doTaskC();
-    doTaskD();
-    doTaskE();
-}
-doTheLargerTask();
+echo printNumber(12, 35, 4);
