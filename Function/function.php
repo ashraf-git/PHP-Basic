@@ -1,14 +1,24 @@
 <?php
-include_once "functions.php";
-
-serve();
-echo PHP_EOL;
-function sum($x, $y, int ...$numbers):int {
-    echo $x;
-   $result = 0;
-   for($i = 0; $i <count($numbers); $i++){
-       $result += $numbers[$i];
-   }
-    return $result;
+function doTaskA(){
+    echo "Step A Done\n";
 }
-echo sum(4, 6, 6, 9);
+function doTaskB(){
+    echo "Step B Done\n";
+}
+function doTaskC(){
+    echo "Step C Done\n";
+}
+function doTaskD(){
+    echo "Step D Done\n";
+}
+function doTaskE(){
+    echo "Step E Done\n";
+}
+function doTheLargerTask(){
+    doTaskA();
+    doTaskB();
+    doTaskC();
+    doTaskD();
+    doTaskE();
+}
+doTheLargerTask();
