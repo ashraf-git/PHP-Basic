@@ -1,20 +1,16 @@
 <?php
-function printN($i){
-    if($i>=10){
-        return;
-    }
-    echo $i."\n";
-    $i++;
-    printN($i);
-}
-// printN(0);
+function fibonacci($old, $new, $end){
+    static $start;
+    $start = $start ?? 1;
 
-function printNumber($counter, $end, $steping =2){
-    if($counter> $end){
+    if($start>$end){
         return;
     }
-    echo $counter."\n";
-    $counter+=$steping;
-    printNumber($counter,$end, $steping);
+    $start++;
+    echo $old." ";
+    $_temp = $old + $new;
+    $old = $new;
+    $new = $_temp;
+    fibonacci($old, $new, $end);
 }
-echo printNumber(12, 35, 4);
+fibonacci(0,1,15);
