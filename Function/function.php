@@ -1,37 +1,8 @@
 <?php
-// $name = "Earth";
-// function doSomething() {
-//     // global $name;
-//     // echo $name;
-//     echo $GLOBALS['name'];
-// }
-// doSomething();
-
-// $name = "Earth";
-// function doSomething() {
-//     global $name;
-//     $name = "Earth";
-//     // echo $name;
-//     // echo $GLOBALS['name'];
-// }
-// doSomething();
-// echo $name;
-
-function doSomething() {
-    static $i;
-    $i = $i ?? 0;
-    $i++;
-    echo $i. "\n";
+function factorial($n){
+    if($n<=1){
+        return 1;
+    }
+    return $n * factorial($n - 1);
 }
-function doExtra() {
-    static $i;
-    $i = $i ?? 0;
-    $i++;
-    echo $i. "\n";
-}
-doSomething();
-doSomething();
-doSomething();
-doExtra();
-doSomething();
-doExtra();
+echo factorial(3);
