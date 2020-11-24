@@ -1,16 +1,37 @@
 <?php
-function fibonacci($old, $new, $end){
-    static $start;
-    $start = $start ?? 1;
+// $name = "Earth";
+// function doSomething() {
+//     // global $name;
+//     // echo $name;
+//     echo $GLOBALS['name'];
+// }
+// doSomething();
 
-    if($start>$end){
-        return;
-    }
-    $start++;
-    echo $old." ";
-    $_temp = $old + $new;
-    $old = $new;
-    $new = $_temp;
-    fibonacci($old, $new, $end);
+// $name = "Earth";
+// function doSomething() {
+//     global $name;
+//     $name = "Earth";
+//     // echo $name;
+//     // echo $GLOBALS['name'];
+// }
+// doSomething();
+// echo $name;
+
+function doSomething() {
+    static $i;
+    $i = $i ?? 0;
+    $i++;
+    echo $i. "\n";
 }
-fibonacci(0,1,15);
+function doExtra() {
+    static $i;
+    $i = $i ?? 0;
+    $i++;
+    echo $i. "\n";
+}
+doSomething();
+doSomething();
+doSomething();
+doExtra();
+doSomething();
+doExtra();
